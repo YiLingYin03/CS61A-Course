@@ -173,10 +173,13 @@ def count_palindromes(L):
     >>> count_palindromes(("Acme", "Madam", "Pivot", "Pip"))
     2
     """
-    count = 0
-    for word in L:
-        count += 1 if is_palindromes(word) else 0
-    return count
+    # my answer
+    # count = 0
+    # for word in L:
+    #     count += 1 if is_palindromes(word) else 0
+    # return count
+    # elegant answer 
+    return len(list(filter(lambda s: s.lower() == s[::-1].lower(), L)))
 
 def is_palindromes(word):
     word = word.lower()
